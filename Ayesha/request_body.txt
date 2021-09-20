@@ -1,0 +1,15 @@
+{
+    "Item_Weight": 23,
+    "Item_Visibility": 0,
+    "Item_MRP": 100,
+    "Outlet_Size": "High",
+    "Outlet_Location_Type" : "Tier 1",
+    "Years_Established" : 23,
+    "Item_Fat_Content" : "Regular",
+    "Outlet_Type" : "Supermarket Type1",
+    "Item_Type_Combined" : "Food",
+    "Item_Type" : "Dairy"
+
+}
+
+http://127.0.0.1:8001/via_postman
