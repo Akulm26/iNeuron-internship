@@ -17,7 +17,7 @@ data=pd.read_csv('14Sept.csv')
 data.columns
 
 
-app = Flask(__name__) # initializing a flask app
+app = Flask(__name__, static_url_path='/static') # initializing a flask app
 
 
 def encod(data):
@@ -51,12 +51,12 @@ def prediction_via_postman():
         Item_Type_Combined = request.json['Item_Type_Combined']
         Item_Type = request.json['Item_Type']
        # print(Item_Weight)
-        data.loc[len(data.index)] = [Item_Weight, Item_Fat_Content, Item_Visibility, Item_Type, Item_MRP, Outlet_Size, Outlet_Location_Type, Outlet_Type, Item_Type, Years_Established]
+        data.loc[len(data.index)] = [Item_Weight, Item_Fat_Content, Item_Visibility, Item_Type, Item_MRP, Outlet_Size, Outlet_Location_Type, Outlet_Type, Item_Type_Combined, Years_Established]
         df=encod(data)
         test=df.tail(1)
         print(len(test.columns))
         print(test.columns)
-        test = test.drop(['Item_Type_Combined_Drinks'], axis = 1)
+        #test = test.drop(['Item_Type_Combined_Drinks'], axis = 1)
         
         
         filename = 'finalized_model.sav'
