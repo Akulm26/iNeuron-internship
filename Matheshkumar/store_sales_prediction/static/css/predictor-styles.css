@@ -1,0 +1,265 @@
+/* css properties for the whole page */
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h3 {
+  font-family: "Koh Santepheap", cursive;
+}
+
+p {
+  font-family: "Montserrat", serif;
+}
+
+td {
+  font-family: "Montserrat", serif;
+}
+
+/* css properties for navbar */
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  padding: 20px;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar a {
+  padding: 0px 25px 0px 10px;
+  font-size: 20px;
+  font-family: "Montserrat", serif;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: yellow;
+}
+
+i {
+  color: tomato;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+.predictor-float-right {
+  float: right;
+
+  margin-right: 33px;
+}
+
+/* css properties for body */
+
+body {
+  margin-top: 80px;
+
+  background-image: linear-gradient(to bottom right, pink, lightblue);
+  background-attachment: fixed;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.sub-heading {
+  font-size: 2rem;
+  margin: 25px 100px;
+}
+
+/* css properties for form */
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.form {
+  margin: 0px 100px 70px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/* BUG  label need to be changed to table row name*/
+label {
+  font-family: "Montserrat", serif;
+  font-size: 1.3rem;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 40%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Montserrat, serif;
+  font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button {
+  padding: 8px;
+  margin: 8px 8px 8px 0px;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    #fcaebb,
+    rgb(107, 107, 247)
+  );
+  color: blueviolet;
+
+  cursor: pointer;
+}
+
+/* radio button properties */
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+  display: inline-block;
+  padding: 10px 15px;
+  font-family: Montserrat, Arial;
+  font-size: 16px;
+  border: 2px solid dimgray;
+  border-radius: 4px;
+}
+
+.radio-toolbar label:hover {
+  background: linear-gradient(to bottom right, #fcaebb, rgb(107, 107, 247));
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+  border: 2px solid #444;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background: linear-gradient(to bottom right, #fcaebb, rgb(107, 107, 247));
+  border-color: blueviolet;
+}
+
+.radio-toolbar {
+  padding: 0px;
+  margin: 8px 0px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+/* responsive css for all devices */
+
+@media only screen and (max-width: 920px) {
+  .show {
+    display: none;
+  }
+
+  .hide {
+    display: initial;
+  }
+
+  tr td:nth-child(1) {
+    width: 30%;
+  }
+
+  tr td:nth-child(2) {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .navbar {
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    padding-top: 145px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .sub-heading {
+    margin: 20px 20px;
+    font-size: 1.5rem;
+  }
+
+  .form {
+    margin: 0px 20px 50px;
+    /* margin: 0px; */
+  }
+
+  button {
+    padding: 4px;
+    margin: 4px 4px 4px 0px;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .hide {
+    display: initial;
+  }
+
+  tr td:nth-child(1) {
+    width: 30%;
+  }
+
+  tr td:nth-child(2) {
+    width: 70%;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Sales Prediction</title>
+
+    <link rel="stylesheet" href="../static/css/result-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="active"><i class="bi bi-house"></i>Home</a>
+      <a href="/"><i class="bi bi-question-circle"></i>About</a>
+      <a href="/"><i class="bi bi-people"></i>Contributors</a>
+      <a href="/predictor" class="predictor-float-right"
+        ><i class="bi bi-graph-up"></i>Sales Predictor</a
+      >
+    </nav>
+
+    <h1 class="heading">Predicted Sales</h1>
+    <main>
+        <section>
+            <h1 class="sub-heading">Your Input :</h1>
+            <div class="input">
+        <table>
+          <tr>
+            <td>Item Weight</td>
+            <td>{{output['testInput']['iWeight']}}</td>
+          </tr>
+          <tr>
+            <td>Item Visibility</td>
+            <td>{{output['testInput']['iVisibility']}}</td>
+          </tr>
+          <tr>
+            <td>Item Fat Content</td>
+            <td>{{output['testInput']['iFat']}}</td>
+          </tr>
+          <tr>
+            <td>Item Type Combined</td>
+            <td>{{output['testInput']['iTypeCombined']}}</td>
+          </tr>
+          <tr>
+            <td>Item Type</td>
+            <td>{{output['testInput']['iType']}}</td>
+          </tr>
+          <tr>
+            <td>Item MRP</td>
+            <td>{{output['testInput']['iMrp']}}</td>
+          </tr>
+          <tr>
+            <td>Year Established</td>
+            <td>{{output['testInput']['oYear']}}</td>
+          </tr>
+          <tr>
+            <td>Outlet Size</td>
+            <td>{{output['testInput']['oSize']}}</td>
+          </tr>
+          <tr>
+            <td>Outlet Location Type</td>
+            <td>{{output['testInput']['oLocation']}}</td>
+          </tr>
+          <tr>
+            <td>Outlet Type</td>
+            <td>{{output['testInput']['oType']}}</td>
+          </tr>
+        </table>
+            </div>
+        </section>
+        <section>
+            <h1 class="sub-heading">Predicted Output :</h1>
+            <div class="output">
+                <p>Expected sales is <span class="prediction">{{output['testOutput']}}</span> 🌟</p>
+            <div>
+        </section>
+    </main>
+  </body>
+</html>

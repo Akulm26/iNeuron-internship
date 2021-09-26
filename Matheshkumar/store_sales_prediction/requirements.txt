@@ -1,0 +1,3 @@
+flask
+category_encoders
+pandas

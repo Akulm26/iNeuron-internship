@@ -1,0 +1,350 @@
+/* css properties common for the whole page */
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h3 {
+  font-family: 'Koh Santepheap', cursive;
+}
+
+p {
+  font-family: "Montserrat", serif;
+}
+
+/* css properties for navbar (header) */
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+
+  top: 0;
+}
+
+.navbar a {
+  padding: 0px 25px 0px 10px;
+  font-size: 20px;
+  font-family: "Montserrat", serif;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: yellow;
+}
+
+i {
+  color: tomato;
+  font-size: 20px;
+  padding-right: 8px;
+}
+
+.predictor-float-right {
+  float: right;
+
+  margin-right: 33px;
+}
+
+/* css properties for main (body) */
+
+.flex-main {
+  display: flex;
+  margin-top: 63px;
+  flex-direction: column;
+}
+
+main {
+  background-image: linear-gradient(to bottom right, pink, lightblue);
+  background-attachment: fixed;
+}
+
+/* css properties for each section inside main */
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  min-height: 100vh;
+}
+
+/* css properties  for home section*/
+
+.home-h1 {
+  font-size: 1.5rem;
+}
+
+.home-h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-para {
+  max-width: 600px;
+
+  color: dimgray;
+}
+
+.home-img {
+  width: 500px;
+  height: 300px;
+  border-radius: 50px;
+
+  border: 3px solid rgb(253, 124, 101);
+  padding: 8px;
+
+  margin-left: 50px;
+}
+
+.home-para {
+  font-size: 1.3rem;
+}
+
+.home-prediction-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1.3rem;
+  font-variant: small-caps;
+  border-radius: 8px;
+}
+
+.home-prediction-btn:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    #fcaebb,
+    rgb(107, 107, 247)
+  );
+  color: blueviolet;
+
+  box-shadow: 0 4px 8px 0 palevioletred, 0 6px 20px 0 palevioletred;
+  cursor: pointer;
+}
+
+/* css properties for about section */
+
+.about-img {
+  width: 500px;
+  height: 300px;
+  border-radius: 50px;
+  border: 3px solid rgb(253, 124, 101);
+
+  padding: 8px;
+}
+
+.about-content {
+  margin-bottom: 180px;
+}
+
+.about-h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  float: right;
+
+  margin: 0px 50px 70px 0px;
+}
+
+.about-para {
+  font-size: 1.3rem;
+  padding: 20px 50px 0px 50px;
+  text-align: justify;
+  line-height: 1.6;
+  clear: right;
+
+  max-width: 600px;
+}
+
+/* css properties for contributors section */
+
+.con-h1 {
+  font-size: 2rem;
+  margin-left: 50px;
+}
+
+.con-content {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 30px;
+}
+
+.con-data {
+  width: 350px;
+  height: 450px;
+  border-radius: 50px;
+}
+
+.con-data:hover {
+  box-shadow: 0 4px 8px 0 palevioletred, 0 6px 20px 0 palevioletred;
+}
+
+.con-image {
+  width: 220px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 40px 0px 20px 65px;
+}
+
+.con-name h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.con-name h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  font-variant: small-caps;
+  font-family: "Montserrat";
+
+  color: dimgray;
+}
+
+.con-contact {
+  margin: 20px 0px 0px 70px;
+}
+
+.con-contact i {
+  font-size: 40px;
+}
+
+.con-contact i:hover {
+  color: blueviolet;
+}
+
+
+/* responsiveness for all devices */
+
+@media only screen and (max-width: 920px){
+  .flex-container {
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
+  }
+
+  .home-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #about {
+    flex-direction: column-reverse;
+  }
+
+  .background {
+    min-height: 50vh;
+  }
+
+  .home-img {
+    margin-left: 0;
+  }
+
+  .about-h1 {
+    margin-bottom: 10px;
+  }
+
+  .about-content {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .about-img {
+    margin-top: 0;
+  }
+
+  .con-h1 {
+    margin-top: 30px;
+  }
+
+  .con-content {
+    margin-bottom: 40px;
+  }
+
+  .con-data {
+    box-shadow: 0 4px 8px 0 palevioletred, 0 6px 20px 0 palevioletred;
+
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  .navbar {
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-main {
+    margin-top: 147px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+
+  .home-h1 {
+    font-size: 1rem;
+  }
+
+  .home-h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .home-para {
+    max-width: 350px;
+  }
+
+  .home-img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .about-content {
+    margin-bottom: 40px;
+  }
+
+  .about-h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .con-h1 {
+    font-size: 1.5rem;
+    margin-left: 30px;
+  }
+
+  .con-data {
+    width: 330px;
+  }
+}

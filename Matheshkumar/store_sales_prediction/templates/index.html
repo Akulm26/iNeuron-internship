@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Sales Prediction</title>
+
+    <link rel="stylesheet" href="../static/css/index-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="#home" class="active"><i class="bi bi-house"></i>Home</a>
+      <a href="#about"><i class="bi bi-question-circle"></i>About</a>
+      <a href="#contributors"><i class="bi bi-people"></i>Contributors</a>
+      <a href="/predictor" class="predictor-float-right"
+        ><i class="bi bi-graph-up"></i>Sales Predictor</a
+      >
+    </nav>
+
+    <main class="flex-main">
+      <section class="background flex-container" id="home">
+        <div class="home-content">
+          <div class="home-h1"><h3>Sales & Marketing</h3></div>
+          <div class="home-h2"><h1>Store Sales Prediction</h1></div>
+          <div class="home-para">
+            <p>
+              Predict sales of the different stores of Big Mart according to the
+              previous sales history.
+            </p>
+          </div>
+
+          <div class="home-pred-btn">
+            <a href="/predictor"
+              ><button class="home-prediction-btn">Sales Predictor</button></a
+            >
+          </div>
+        </div>
+
+        <div>
+          <img
+            class="home-img"
+            src="../static/../static/images/store-sales.jpg"
+            alt="sales graph image"
+          />
+        </div>
+      </section>
+
+      <section class="background flex-container" id="about">
+        <div>
+          <img
+            class="about-img"
+            src="../static/../static/images/store-sales-2.png"
+            alt="sales graph image"
+          />
+        </div>
+
+        <div class="about-content">
+          <div class="about-h1"><h1>About</h1></div>
+          <div class="about-para">
+            <p>
+              Nowadays, shopping malls and Big Marts keep track of individual
+              item sales data in order to forecast future client demand and
+              adjust inventory management. In a data warehouse, these data
+              stores hold a significant amount of consumer information and
+              particular item details. By mining the data store from the data
+              warehouse, more anomalies and common patterns can be discovered.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="background" id="contributors">
+        <div class="con-h1">
+          <h1>Contributors</h1>
+        </div>
+
+        <div class="con-content flex-container">
+          <div class="con-data">
+            <section class="con-details">
+              <img class="con-image" src="../static/images/mk.png" alt="" />
+              <div class="con-name">
+                <h1>Ayesha Khan</h1>
+                <h3>Associate Data Scientist at LTI</h3>
+              </div>
+            </section>
+
+            <section class="con-contact">
+              <a href=""><i class="bi bi-github"></i></a>
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i class="bi bi-envelope-fill"></i></a>
+            </section>
+          </div>
+
+          <div class="con-data">
+            <section class="con-details">
+              <img class="con-image" src="../static/images/mk.png" alt="" />
+              <div class="con-name con2-name">
+                <h1>Akul Suhail Malhotra</h1>
+                <h3>Data Scientist at Dfuse Technologies</h3>
+              </div>
+            </section>
+
+            <section class="con-contact">
+              <a href=""><i class="bi bi-github"></i></a>
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href=""><i class="bi bi-envelope-fill"></i></a>
+            </section>
+          </div>
+
+          <div class="con-data">
+            <section class="con-details">
+              <img class="con-image" src="../static/images/mk.png" alt="" />
+              <div class="con-name">
+                <h1>Matheshkumar P</h1>
+                <h3>Final Year B.E. CSE Student</h3>
+              </div>
+            </section>
+
+            <section class="con-contact">
+              <a href="http://github.com/Mathesh-kumar"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a href="https://twitter.com/matheshkumar256"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="http://linkedin.com/in/matheshkumar-p-066571199"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="matheshkumar256@gmail.com"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

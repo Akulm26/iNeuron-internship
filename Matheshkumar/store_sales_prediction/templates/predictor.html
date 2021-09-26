@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Predictor</title>
+
+    <link rel="stylesheet" href="../static/css/predictor-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="/" class="active"><i class="bi bi-house"></i>Home</a>
+      <a href="/"><i class="bi bi-question-circle"></i>About</a>
+      <a href="/"><i class="bi bi-people"></i>Contributors</a>
+      <a href="/predictor" class="predictor-float-right"
+        ><i class="bi bi-graph-up"></i>Sales Predictor</a
+      >
+    </nav>
+
+    <h1 class="heading">Store Sales Predictor</h1>
+    <h1 class="sub-heading">Enter necessary details to predict sales.</h1>
+
+    <div class="form">
+      <form method="POST">
+        <table>
+          <tr>
+            <td>Item Weight</td>
+            <td>
+              <input
+                type="text"
+                id="weight"
+                name="weight"
+                placeholder="Enter Item Weight ..."
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Item Visibility</td>
+            <td>
+              <input
+                type="text"
+                id="visibility"
+                name="visibility"
+                placeholder="Enter Item Visibility ..."
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Item Fat Content</td>
+            <td>
+              <div class="radio-toolbar">
+                <input
+                  type="radio"
+                  id="lowfat"
+                  name="fat-content"
+                  value="Low Fat"
+                  required
+                />
+                <label for="lowfat">Low Fat</label>
+                <input
+                  type="radio"
+                  id="regular"
+                  name="fat-content"
+                  value="Regular"
+                />
+                <label for="regular">Regular</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Item Type Combined</td>
+            <td class="show">
+              <div class="radio-toolbar">
+                <input
+                  type="radio"
+                  id="food"
+                  name="item-type-combined"
+                  value="Food"
+                  required
+                />
+                <label for="food">Food</label>
+                <input
+                  type="radio"
+                  id="nonconsumables"
+                  name="item-type-combined"
+                  value="Non-Consumable"
+                />
+                <label for="nonconsumables">Non Consumables</label>
+                <input
+                  type="radio"
+                  id="drinks"
+                  name="item-type-combined"
+                  value="Drinks"
+                />
+                <label for="drinks">Drinks</label>
+              </div>
+            </td>
+
+            <td class="hide">
+              <select id="type" name="item-type-combined" class="hide">
+                <option value="Food">Food</option>
+                <option value="Non-Consumable">Non Consumables</option>
+                <option value="Drinks">Drinks</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Item Type</td>
+            <td>
+              <select id="itype" name="item-type">
+                <option value="Fruits and Vegetables">
+                  Fruits and Vegetables
+                </option>
+                <option value="Snack Foods">Snack Foods</option>
+                <option value="Household">Household</option>
+                <option value="Frozen Foods">Frozen Foods</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Canned">Canned</option>
+                <option value="Baking Goods">Baking Goods</option>
+                <option value="Health and Hygiene">Health and Hygiene</option>
+                <option value="Soft Drinks">Soft Drinks</option>
+                <option value="Meat">Meat</option>
+                <option value="Breads">Breads</option>
+                <option value="Hard Drinks">Hard Drinks</option>
+                <option value="Others">Others</option>
+                <option value="Starchy Foods">Starchy Foods</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Seafood">Seafood</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Item MRP</td>
+            <td>
+              <input
+                type="text"
+                id="mrp"
+                name="mrp"
+                placeholder="Enter Item MRP ..."
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Year Established</td>
+            <td>
+              <input
+                type="text"
+                id="year"
+                name="outlet-year"
+                placeholder="Enter Year Established ..."
+                required
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Outlet Size</td>
+            <td>
+              <div class="radio-toolbar">
+                <input
+                  type="radio"
+                  id="small"
+                  name="outlet-size"
+                  value="Small"
+                  required
+                />
+                <label for="small">Small</label>
+                <input
+                  type="radio"
+                  id="medium"
+                  name="outlet-size"
+                  value="Medium"
+                />
+                <label for="medium">Medium</label>
+                <input type="radio" id="high" name="outlet-size" value="High" />
+                <label for="high">High</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Outlet Location Type</td>
+            <td>
+              <div class="radio-toolbar">
+                <input
+                  type="radio"
+                  id="tier1"
+                  name="outlet-loc-type"
+                  value="Tier 1"
+                  required
+                />
+                <label for="tier1">Tier1</label>
+                <input
+                  type="radio"
+                  id="tier2"
+                  name="outlet-loc-type"
+                  value="Tier 2"
+                />
+                <label for="tier2">Tier2</label>
+                <input
+                  type="radio"
+                  id="tier3"
+                  name="outlet-loc-type"
+                  value="Tier 3"
+                />
+                <label for="tier3">Tier3</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Outlet Type</td>
+            <td class="show">
+              <div class="radio-toolbar">
+                <input
+                  type="radio"
+                  id="stype1"
+                  name="outlet-type"
+                  value="Supermarket Type1"
+                  required
+                />
+                <label for="stype1">Supermarket Type1</label>
+                <input
+                  type="radio"
+                  id="stype2"
+                  name="outlet-type"
+                  value="Supermarket Type2"
+                />
+                <label for="stype2">Supermarket Type2</label>
+                <input
+                  type="radio"
+                  id="stype3"
+                  name="outlet-type"
+                  value="Supermarket Type3"
+                />
+                <label for="stype3">Supermarket Type3</label>
+                <input
+                  type="radio"
+                  id="gstore"
+                  name="outlet-type"
+                  value="Grocery Store"
+                />
+                <label for="gstore">Grocery Store</label>
+              </div>
+            </td>
+
+            <td class="hide">
+              <select id="stype" name="outlet-type">
+                <option value="Supermarket Type1">Supermarket Type1</option>
+                <option value="Supermarket Type2">Supermarket Type2</option>
+                <option value="Supermarket Type3">Supermarket Type3</option>
+                <option value="Grocery Store">Grocery Store</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+
+        <input formaction="/predictor" type="submit" value="Predict" />
+      </form>
+    </div>
+  </body>
+</html>
