@@ -28,11 +28,6 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/result/<sales>')
-def result(sales):
-    return render_template('predictor.html', sales=sales)
-
-
 @app.route('/predictor', methods=['POST', 'GET'])
 def prediction():
     if request.method == 'GET':
@@ -64,7 +59,6 @@ def prediction():
         testOutput = predict[0]
 
         output = dict(testInput=testInput, testOutput=testOutput)
-        # return redirect(url_for('result', sales=output))
         return render_template('result.html', output=output)
     else:
         return jsonify({'replyMessage': "OOPS! Something gone wrong..."})
