@@ -1,0 +1,20 @@
+INFO -  * Restarting with stat
+WARNING -  * Debugger is active!
+INFO -  * Debugger PIN: 126-774-530
+INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:40] "GET / HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:41] "GET /static/css/index-styles.css HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:41] "[33mGET /js/script.js HTTP/1.1[0m" 404 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:52] "[36mGET /static/images/mk.png HTTP/1.1[0m" 304 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:52] "GET /static/images/store-sales.jpg HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:52] "GET /static/images/akul.jpg HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:52] "GET /static/images/ayesha.jpg HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:52] "GET /static/images/store-sales-2.png HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:56] "GET /predictor HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:14:56] "GET /static/css/predictor-styles.css HTTP/1.1" 200 -
+INFO - User Input : 
+   {'iWeight': 100.0, 'iVisibility': 0.05, 'iFat': 'Regular', 'iTypeCombined': 'Food', 'iType': 'Fruits and Vegetables', 'iMrp': 100.0, 'oYear': '1998', 'oSize': 'Medium', 'oLocation': 'Tier 2', 'oType': 'Supermarket Type2'}
+INFO - Predicted Output : 
+   {'result': 817.413224517393}
+INFO - 127.0.0.1 - - [22/Nov/2021 23:15:14] "POST /predictor HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [22/Nov/2021 23:15:14] "[36mGET /static/css/result-styles.css HTTP/1.1[0m" 304 -

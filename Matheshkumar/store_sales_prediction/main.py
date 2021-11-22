@@ -3,11 +3,12 @@ from flask.helpers import url_for
 import pickle
 import category_encoders as ce
 import pandas as pd
+import logging
 
 app = Flask(__name__)
-
 data = pd.read_csv('14Sept.csv')
 
+logging.basicConfig(level=logging.INFO, filename='app.log', filemode='a', format='%(levelname)s - %(message)s')
 
 def encode(data):
     encoder_1 = ce.OrdinalEncoder(cols=['Outlet_Size'], return_df=True,
@@ -22,7 +23,6 @@ def encode(data):
                                                              'Item_Type'], drop_first=True)
     return data_encoded
 
-
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
@@ -33,32 +33,51 @@ def prediction():
     if request.method == 'GET':
         return render_template('predictor.html')
     elif request.method == 'POST':
-        iWeight = float(request.form['weight'])
-        iVisibility = float(request.form['visibility'])
-        iFat = request.form['fat-content']
-        iTypeCombined = request.form['item-type-combined']
-        iType = request.form['item-type']
-        iMrp = float(request.form['mrp'])
-        oYear = request.form['outlet-year']
-        oSize = request.form['outlet-size']
-        oLocation = request.form['outlet-loc-type']
-        oType = request.form['outlet-type']
+
+        try:
+            iWeight = float(request.form['weight'])
+            iVisibility = float(request.form['visibility'])
+            iFat = request.form['fat-content']
+            iTypeCombined = request.form['item-type-combined']
+            iType = request.form['item-type']
+            iMrp = float(request.form['mrp'])
+            oYear = request.form['outlet-year']
+            oSize = request.form['outlet-size']
+            oLocation = request.form['outlet-loc-type']
+            oType = request.form['outlet-type']
+        except:
+            logging.error("Problem in form input retrieval")
 
         testInput = dict(iWeight=iWeight, iVisibility=iVisibility, iFat=iFat, iTypeCombined=iTypeCombined, 
         iType=iType, iMrp=iMrp, oYear=oYear, oSize=oSize, oLocation=oLocation, oType=oType)
 
         data.loc[len(data.index)] = [iWeight, iFat, iVisibility, iType, iMrp, oSize, oLocation, oType, iTypeCombined,
                                      oYear]
-        df = encode(data)
+        
+        try:
+            df = encode(data)
+        except:
+            logging.critical("Problem in encoding data")
+        
         test = df.tail(1)
-
         filename = 'finalized_model.sav'
-        loaded_model = pickle.load(open(filename, 'rb'))
 
-        predict = loaded_model.predict(test)
+        try:
+            loaded_model = pickle.load(open(filename, 'rb'))
+        except:
+            logging.error("Problem in model loading using pickle")
+
+        try:
+            predict = loaded_model.predict(test)
+        except:
+            logging.critical("Problem in model prediction")
+        
         testOutput = predict[0]
-
         output = dict(testInput=testInput, testOutput=testOutput)
+
+        logging.info("User Input : \n   {}".format(testInput))
+        logging.info("Predicted Output : \n   {}".format({"result":testOutput}))
+        
         return render_template('result.html', output=output)
     else:
         return jsonify({'replyMessage': "OOPS! Something gone wrong..."})
