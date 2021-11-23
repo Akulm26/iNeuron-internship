@@ -1,3 +1,5 @@
 flask
 category_encoders
 pandas
+scikit-learn
+gunicorn

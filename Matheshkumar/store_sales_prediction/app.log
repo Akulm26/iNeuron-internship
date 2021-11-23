@@ -18,3 +18,26 @@ INFO - Predicted Output :
    {'result': 817.413224517393}
 INFO - 127.0.0.1 - - [22/Nov/2021 23:15:14] "POST /predictor HTTP/1.1" 200 -
 INFO - 127.0.0.1 - - [22/Nov/2021 23:15:14] "[36mGET /static/css/result-styles.css HTTP/1.1[0m" 304 -
+INFO -  * Restarting with stat
+WARNING -  * Debugger is active!
+INFO -  * Debugger PIN: 517-045-929
+INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:57] "GET / HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:58] "[33mGET /js/script.js HTTP/1.1[0m" 404 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:58] "GET /static/css/index-styles.css HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:59] "GET /static/images/store-sales-2.png HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:59] "GET /static/images/akul.jpg HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:59] "GET /static/images/ayesha.jpg HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:59] "GET /static/images/store-sales.jpg HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:08:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:00] "[36mGET /static/images/mk.png HTTP/1.1[0m" 304 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:07] "GET /predictor HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:07] "GET /static/css/predictor-styles.css HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO - User Input : 
+   {'iWeight': 10.0, 'iVisibility': 0.0, 'iFat': 'Regular', 'iTypeCombined': 'Food', 'iType': 'Fruits and Vegetables', 'iMrp': 10.0, 'oYear': '1990', 'oSize': 'Medium', 'oLocation': 'Tier 2', 'oType': 'Supermarket Type2'}
+INFO - Predicted Output : 
+   {'result': 349.54355551162473}
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:33] "POST /predictor HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:33] "GET /static/css/result-styles.css HTTP/1.1" 200 -
+INFO - 127.0.0.1 - - [23/Nov/2021 16:09:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

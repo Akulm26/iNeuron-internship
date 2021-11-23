@@ -6,7 +6,7 @@ import pandas as pd
 import logging
 
 app = Flask(__name__)
-data = pd.read_csv('14Sept.csv')
+data = pd.read_csv('14sept.csv')
 
 logging.basicConfig(level=logging.INFO, filename='app.log', filemode='a', format='%(levelname)s - %(message)s')
 
